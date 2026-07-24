@@ -3,12 +3,12 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-26.05";
 
-    niri-stable.url = "github:YaLTeR/niri/v25.08";
+    niri-stable.url = "github:YaLTeR/niri/v26.04";
     niri-unstable.url = "github:YaLTeR/niri";
 
-    xwayland-satellite-stable.url = "github:Supreeeme/xwayland-satellite/v0.7";
+    xwayland-satellite-stable.url = "github:Supreeeme/xwayland-satellite/v0.8.2";
     xwayland-satellite-unstable.url = "github:Supreeeme/xwayland-satellite";
 
     # they do all have flakes, but we specifically want just the Rust sources and no flakes.
@@ -306,7 +306,7 @@
       make-package-set = pkgs: {
         niri-stable = pkgs.callPackage make-niri {
           src = inputs.niri-stable;
-          replace-service-with-usr-bin = true;
+          replace-service-with-usr-bin = false;
         };
         niri-unstable = pkgs.callPackage make-niri {
           src = inputs.niri-unstable;
