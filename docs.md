@@ -2119,6 +2119,18 @@ Values above 1 increase saturation; values below 1 reduce it.
 - default: `null`
 
 
+<!-- programs.niri.settings.animations.recent-windows-close -->
+
+## `programs.niri.settings.animations.recent-windows-close.enable`
+- type: `boolean`
+- default: `true`
+
+
+## `programs.niri.settings.animations.recent-windows-close.kind`
+- type: `null or`[`<animation-kind>`](#animation-kind)
+- default: `null`
+
+
 <!-- programs.niri.settings.animations.screenshot-ui-open -->
 
 ## `programs.niri.settings.animations.screenshot-ui-open.enable`
